@@ -47,6 +47,7 @@ steps:
     command: 'publish'
     publishWebProjects: true
     arguments: '$(buildConfiguration) --output $(build.artifactstagingdirectory)'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
